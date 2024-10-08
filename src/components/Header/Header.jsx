@@ -1,6 +1,7 @@
 import React from "react";
-// Import your profile picture
-import profileImage from '../../assets/profile.png'; // Adjust the path as needed
+import profileImage from '../../assets/profile.png'; 
+import { IoMdCloudDownload } from "react-icons/io";
+
 
 const Header = () => {
   return (
@@ -15,6 +16,11 @@ const Header = () => {
         <p className="text-zinc-600 dark:text-zinc-500">
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eos quidem, enim consequatur neque est corrupti consectetur totam similique et.
         </p>
+        
+        <a href="https://docs.google.com/document/d/1-o2po9i3nAuw7KxLV2OBPkPnEGXhFjHlh-wg3UyiFow/export?format=pdf" download className="flex items-center w-32 my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <IoMdCloudDownload className="mr-2"/> Resume</a>
+
+        
       </div>
       <div className="relative flex-shrink-1 p-4 md:p-4 md:order-last order-first">
         <a
