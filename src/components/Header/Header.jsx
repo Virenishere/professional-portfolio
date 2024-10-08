@@ -1,7 +1,7 @@
 import React from "react";
 import profileImage from '../../assets/profile.png'; 
 import { IoMdCloudDownload } from "react-icons/io";
-
+import { FaTwitter, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Header = () => {
   return (
@@ -10,26 +10,39 @@ const Header = () => {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-black dark:text-white">
           Virender Prasad
         </h1>
-        <div className="relative leading-7 items-center flex-wrap text-zinc-700 dark:text-zinc-400 mb-5">
-         social-icons
+        <div className="flex flex-wrap items-center mb-5 text-zinc-700 dark:text-zinc-400">
+          
+          <div className="flex space-x-4">
+            <a href="https://twitter.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
+                <FaTwitter className="text-2xl" />
+            </a>
+            <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-gray-800 transition duration-200">
+                <FaGithub className="text-2xl" />
+            </a>
+            <a href="https://www.linkedin.com/in/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition duration-200">
+                <FaLinkedin className="text-2xl" />
+            </a>
+            <a href="mailto:your_email@example.com" className="hover:text-red-500 transition duration-200">
+                <FaEnvelope className="text-2xl" />
+            </a>
+          </div>
         </div>
         <p className="text-zinc-600 dark:text-zinc-500">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eos quidem, enim consequatur neque est corrupti consectetur totam similique et.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eos quidem, enim consequatur neque est corrupti consectetur totam similique et.
         </p>
         
         <a href="https://docs.google.com/document/d/1-o2po9i3nAuw7KxLV2OBPkPnEGXhFjHlh-wg3UyiFow/export?format=pdf" download className="flex items-center w-32 my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        <IoMdCloudDownload className="mr-2"/> Resume</a>
-
-        
+          <IoMdCloudDownload className="mr-2"/> Resume
+        </a>
       </div>
-      <div className="relative flex-shrink-1 p-4 md:p-4 md:order-last order-first">
+
+      <div className="relative flex-shrink-0 p-4 md:p-4 md:order-last order-first">
         <a
           href="https://x.com/Viren_iz_here"
           target="_blank"
           rel="noopener noreferrer"
           className="block z-[5] overflow-hidden rounded shadow-xl ring-1 ring-slate-900/5 relative bg-white h-20 w-20"
         >
-          
           <img
             decoding="async"
             sizes="100vw"
