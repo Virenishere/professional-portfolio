@@ -1,33 +1,38 @@
 import React from "react";
+import pawanComputerCenterImage from '../../assets/pcc.png';
+import buildYourBuzzImage from '../../assets/bbz.png';
+import coinLoreImage from '../../assets/cl.png';
+import farmer2BuyerImage from '../../assets/f2b.png';
+
 
 const projectsData = [
     {
-        title: "Moonbeam",
+        title: "Pawan Computer Center",
         description: "Never write from scratch again. Kickstart your next great writing piece with Moonbeam. Your long-form writing AI assistant.",
         technologies: ["Front-end", "GPT-3", "Next.js", "React", "TailwindCSS", "Chrome Extension"],
-        imageUrl: "https://via.placeholder.com/150", // Replace with your image URLs
-        link: "https://www.google.com" // Add a link property
+        imageUrl: pawanComputerCenterImage, // Replace with your image URLs
+        link: "https://pawan-computer-center-h5xa.vercel.app/" // Add a link property
     },
     {
-        title: "Aceternity",
+        title: "Build Your Buzz",
         description: "Building modern applications that scale well and are easy to maintain. Cutting edge websites with a pinch of magic, and a lot of love.",
         technologies: ["Next.js", "React", "TailwindCSS", "Full-Stack"],
-        imageUrl: "https://via.placeholder.com/150",
-        link: "https://www.google.com" // Add a link property
+        imageUrl: buildYourBuzzImage,
+        link: "https://build-your-buzz.vercel.app/" // Add a link property
     },
     {
-        title: "Algochurn",
+        title: "CoinLore",
         description: "Practice the most popular algorithmic questions and Front-end interview questions with an interactive IDE and learning environment.",
         technologies: ["Next.js", "React", "TailwindCSS", "Monaco", "Algorithms"],
-        imageUrl: "https://via.placeholder.com/150",
-        link: "https://www.google.com" // Add a link property
+        imageUrl: coinLoreImage,
+        link: "https://coin-lore.vercel.app/" // Add a link property
     },
     {
-        title: "Tailwind Master Kit",
+        title: "Farmer2Buyer",
         description: "Beautiful, Handcrafted, ready-to-use components and templates for your next Tailwind web app project.",
         technologies: ["Tailwind", "Next.js", "Freemium"],
-        imageUrl: "https://via.placeholder.com/150",
-        link: "https://www.google.com" // Add a link property
+        imageUrl: farmer2BuyerImage,
+        link: "https://farmers-2-sellers.netlify.app/" // Add a link property
     },
 ];
 
