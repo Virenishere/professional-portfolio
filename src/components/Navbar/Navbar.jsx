@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { LuSun,LuMoon } from "react-icons/lu";
-
-
+import { LuSun, LuMoon } from "react-icons/lu";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Import Hamburger and Close icons
 
 export default function Navbar({ toggleDarkMode, darkMode }) {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -16,8 +15,10 @@ export default function Navbar({ toggleDarkMode, darkMode }) {
     ];
 
     return (
-        <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 mx-auto bg-opacity-60">
+        <nav className="relative sticky-nav flex justify-between items-center max-w-4xl w-full p-8 mx-auto bg-opacity-60">
             <a href="#skip" className="sr-only focus:not-sr-only">Skip to content</a>
+
+            {/* Dark Mode Toggle */}
             <button
                 aria-label="Toggle Dark Mode"
                 type="button"
@@ -64,9 +65,9 @@ export default function Navbar({ toggleDarkMode, darkMode }) {
                     className="p-2 rounded-md bg-gray-200 dark:bg-gray-800 flex items-center justify-center focus:outline-none"
                 >
                     {isMenuOpen ? (
-                        <LuMoon className="h-6 w-6 text-black dark:text-white" />
+                        <HiOutlineX className="h-6 w-6 text-black dark:text-white" />
                     ) : (
-                        <LuSun className="h-6 w-6 text-black dark:text-white" />
+                        <HiOutlineMenu className="h-6 w-6 text-black dark:text-white" />
                     )}
                 </button>
             </div>
@@ -75,7 +76,7 @@ export default function Navbar({ toggleDarkMode, darkMode }) {
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
-                        className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-lg dark:bg-zinc-900 z-10"
+                        className="absolute top-24 left-0 w-full bg-white rounded-lg shadow-lg dark:bg-zinc-900 z-10"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
