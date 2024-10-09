@@ -16,7 +16,8 @@ const Contact = () => {
         
         try {
             // Sending email to your backend endpoint
-            const response = await axios.post('https://professional-portfolio-viren-backend-7z71fg1z6.vercel.app/', { email });
+            const response = await axios.post('https://professional-portfolio-viren-backend-7z71fg1z6.vercel.app/send-email', { email });
+
 
             // If the response is successful
             if (response.status === 200) {

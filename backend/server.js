@@ -12,6 +12,7 @@ const corsOptions = {
     origin: "https://professional-portfolio-nine-sigma.vercel.app/",
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
+    credentials: true, // Allow credentials if needed
 };
 
 // Middleware
