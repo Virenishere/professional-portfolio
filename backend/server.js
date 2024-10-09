@@ -11,11 +11,17 @@ const app = express();
 // CORS configuration
 const corsOptions = {
     origin: [
-        "https://professional-portfolio-frontend-nine.vercel.app"],
+        "https://professional-portfolio-frontend-nine.vercel.app",
+        "https://professional-portfolio-frontend-gwuo16sgc.vercel.app"
+    ],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
 };
+
+// Middleware
+app.use(cors(corsOptions));
+
 
 // Middleware setup
 app.use(cors(corsOptions)); // CORS should be the first middleware
