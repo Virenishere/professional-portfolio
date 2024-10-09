@@ -12,8 +12,6 @@ const App = () => {
       return newMode; 
     });
   };
-
-  
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode");
     if (savedMode === "true") {
@@ -22,7 +20,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className={darkMode ? "dark" : ""}> 
+    <div className={`overflow-x-hidden ${darkMode ? "dark" : ""}`}>
       <Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} /> 
       
     </div>

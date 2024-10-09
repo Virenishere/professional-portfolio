@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'; // Import motion for animations
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Contact = () => {
     const [email, setEmail] = useState('');
@@ -10,6 +11,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        
         console.log("Email submitted:", email);
         setEmail(''); 
     };

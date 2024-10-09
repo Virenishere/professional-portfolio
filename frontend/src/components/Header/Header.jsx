@@ -13,16 +13,16 @@ const Header = () => {
         <div className="flex flex-wrap items-center mb-5 text-zinc-700 dark:text-zinc-400">
           
           <div className="flex space-x-4">
-            <a href="https://twitter.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
+            <a href="https://x.com/Viren_iz_here" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
                 <FaTwitter className="text-2xl" />
             </a>
-            <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-gray-800 transition duration-200">
+            <a href="https://github.com/Virenishere" target="_blank" rel="noopener noreferrer" className=" hover:text-red-500 transition duration-200">
                 <FaGithub className="text-2xl" />
             </a>
-            <a href="https://www.linkedin.com/in/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition duration-200">
+            <a href="https://www.linkedin.com/in/virenderprasad/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition duration-200">
                 <FaLinkedin className="text-2xl" />
             </a>
-            <a href="mailto:your_email@example.com" className="hover:text-red-500 transition duration-200">
+            <a href="mailto:virender288@gmail.com" className="hover:text-yellow-500 transition duration-200">
                 <FaEnvelope className="text-2xl" />
             </a>
           </div>

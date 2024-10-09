@@ -22,7 +22,7 @@ export default function Navbar({ toggleDarkMode, darkMode }) {
             <button
                 aria-label="Toggle Dark Mode"
                 type="button"
-                className="group mt-4 rounded-full bg-white/90 p-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-900/90 dark:ring-teal-500/50 dark:hover:ring-white/20"
+                className="group mt-4 rounded-full bg-white/90 p-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-900/90 dark:ring-white/20  dark:hover:ring-teal-500/50"
                 onClick={toggleDarkMode}
             >
                 {darkMode ? (
@@ -33,14 +33,14 @@ export default function Navbar({ toggleDarkMode, darkMode }) {
             </button>
 
             {/* Desktop Navigation */}
-            <div className="hidden sm:flex space-x-4 justify-center items-center rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10">
+            <div className="hidden sm:flex space-x-4 justify-center items-center rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-teal-500/50">
                 {links.map((navLink, index) => (
                     <a
                         key={navLink.name}
                         href={navLink.link}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
-                        className="relative rounded-xl px-4 py-2 text-sm text-gray-700 transition-all delay-150 hover:text-gray-900"
+                        className="relative rounded-xl px-4 py-2 text-sm text-gray-700 transition-all delay-150 hover:text-gray-900 "
                     >
                         <AnimatePresence>
                             {hoveredIndex === index && (

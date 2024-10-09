@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 
 const Home = ({ toggleDarkMode, darkMode }) => {
     return (
-        <div className="bg-white dark:bg-zinc-900/90 text-black dark:text-white">
+        <div className="bg-white dark:bg-[#18181B] text-black dark:text-white">
             <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} /> 
             <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
             <Skills toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
