@@ -12,11 +12,14 @@ const corsOptions = {
     origin: "https://professional-portfolio-frontend-henna.vercel.app/",
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
-    credentials: true, // Allow credentials if needed
+    credentials: true,
 };
+
 
 // Middleware
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));  // Handle preflight requests
+
 app.use(bodyParser.json());
 app.use(helmet());
 
