@@ -4,6 +4,6 @@
         { "src": "server.js", "use": "@vercel/node" }
     ],
     "routes": [
-        { "src": "/send-email", "methods": ["POST", "OPTIONS"], "dest": "/server.js" }
+        { "src": "/send-email", "methods": ["POST"], "dest": "/server.js" }
     ]
 }

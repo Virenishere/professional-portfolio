@@ -14,29 +14,23 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true); // Set loading to true when submitting
-
+        
         try {
             const response = await axios.post('https://professional-portfolio-ten-fawn.vercel.app/send-email', { email });
-
             if (response.status === 200) {
                 console.log("Email submitted:", email);
                 setSuccess('Email sent successfully!');
                 setError(null);
-                setEmail(''); // Clear the input on success
             }
         } catch (err) {
-            console.error('Error sending email:', err.response || err.message); // Log the error response for better debugging
+            console.error('Error sending email:', err.response ? err.response.data : err.message); // Log the error response
             setError('Failed to send email. Please try again.');
             setSuccess(null);
-        } finally {
-            setLoading(false); // Set loading to false after completion
-            setTimeout(() => {
-                setSuccess(null); // Clear success message after 5 seconds
-                setError(null); // Clear error message after 5 seconds
-            }, 5000);
         }
+        
+        setEmail('');
     };
+    
 
     return (
         <div className='max-w-4xl mx-auto p-8'>
