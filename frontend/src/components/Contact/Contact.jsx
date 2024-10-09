@@ -15,11 +15,8 @@ const Contact = () => {
         e.preventDefault();
         
         try {
-            // Sending email to your backend endpoint
             const response = await axios.post('https://professional-portfolio-viren-backend-7z71fg1z6.vercel.app/send-email', { email });
-
-
-            // If the response is successful
+    
             if (response.status === 200) {
                 console.log("Email submitted:", email);
                 setSuccess('Email sent successfully!'); 
@@ -30,9 +27,10 @@ const Contact = () => {
             setError('Failed to send email. Please try again.'); 
             setSuccess(null); 
         }
-
+    
         setEmail(''); 
     };
+    
 
     return (
         <div className='max-w-4xl mx-auto p-8'>
