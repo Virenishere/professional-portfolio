@@ -10,8 +10,9 @@ const app = express();
 
 const corsOptions = {
     origin: "https://professional-portfolio-frontend-nine.vercel.app",
-    methods: ['GET', 'POST', 'OPTIONS'],
+    methods: ['GET', 'POST', 'OPTIONS'], // Allowing specific methods
     allowedHeaders: ['Content-Type'],
+    credentials: true, // Optional: if you need to include cookies in requests
 };
 
 // Middleware
@@ -26,7 +27,7 @@ app.post('/send-email', async (req, res) => {
     const { email } = req.body;
 
     if (!email) {
-        return res.status(400).json({ message: 'All fields are required' });
+        return res.status(400).json({ message: 'Email is required' });
     }
 
     const transporter = nodemailer.createTransport({
@@ -40,7 +41,7 @@ app.post('/send-email', async (req, res) => {
     const mailOptions = {
         from: email,
         to: process.env.EMAIL_USER,
-        subject: `Contact Form Portfolio`,
+        subject: `Contact Form Submission`,
         text: `You have received a new message from your contact form: ${email}`,
     };
 
