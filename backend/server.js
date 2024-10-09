@@ -20,11 +20,8 @@ const corsOptions = {
 };
 
 // Middleware
-app.use(cors(corsOptions));
-
-
-// Middleware setup
 app.use(cors(corsOptions)); // CORS should be the first middleware
+
 app.use(bodyParser.json());
 app.use(helmet());
 
