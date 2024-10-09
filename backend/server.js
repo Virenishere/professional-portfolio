@@ -5,12 +5,11 @@ const bodyParser = require("body-parser");
 const helmet = require('helmet');
 const cors = require('cors');
 
-const PORT = process.env.PORT || 5000; // Use PORT from environment or default to 5000
+const PORT = process.env.PORT || 5000; // Use PORT from environment
 const app = express();
 
-// CORS configuration
 const corsOptions = {
-    origin: "https://professional-portfolio-frontend-nine.vercel.app", // Ensure no trailing slash
+    origin: "https://professional-portfolio-frontend-nine.vercel.app",
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
 };
@@ -20,18 +19,9 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(helmet());
 
-// Log incoming requests (for debugging)
-app.use((req, res, next) => {
-    console.log(`${req.method} request for '${req.url}'`);
-    next();
-});
+// Enable preflight for the send-email route
+app.options('/send-email', cors(corsOptions));
 
-// Handle OPTIONS requests
-app.options('/send-email', (req, res) => {
-    res.sendStatus(200); // Respond with 200 OK for OPTIONS requests
-});
-
-// POST route to send email
 app.post('/send-email', async (req, res) => {
     const { email } = req.body;
 
@@ -39,7 +29,6 @@ app.post('/send-email', async (req, res) => {
         return res.status(400).json({ message: 'All fields are required' });
     }
 
-    // Configure the transporter for sending email using Nodemailer
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -48,17 +37,15 @@ app.post('/send-email', async (req, res) => {
         },
     });
 
-    // Email options
     const mailOptions = {
         from: email,
         to: process.env.EMAIL_USER,
         subject: `Contact Form Portfolio`,
-        text: `You have received a new message from your contact form and the email is: ${email}`,
+        text: `You have received a new message from your contact form: ${email}`,
     };
 
     try {
         await transporter.sendMail(mailOptions);
-        console.log('Email sent successfully');
         return res.status(200).json({ message: "Email sent successfully" });
     } catch (error) {
         console.error('Error sending email:', error);
@@ -66,7 +53,6 @@ app.post('/send-email', async (req, res) => {
     }
 });
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running at port ${PORT}`);
 });
