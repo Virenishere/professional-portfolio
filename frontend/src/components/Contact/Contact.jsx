@@ -15,7 +15,7 @@ const Contact = () => {
         e.preventDefault();
         
         try {
-            const response = await axios.post('https://professional-portfolio-viren-backend-7z71fg1z6.vercel.app/send-email', { email });
+            const response = await axios.post('https://professional-portfolio-backend.vercel.app/send-email', { email });
     
             if (response.status === 200) {
                 console.log("Email submitted:", email);
