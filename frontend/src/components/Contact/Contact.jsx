@@ -13,25 +13,23 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true);
-        setError(null);
-        setSuccess(null);
         
         try {
             const response = await axios.post('https://professional-portfolio-backend.vercel.app/send-email', { email });
+    
             if (response.status === 200) {
                 console.log("Email submitted:", email);
                 setSuccess('Email sent successfully!'); 
+                setError(null); 
             }
         } catch (err) {
             console.error('Error sending email:', err);
             setError('Failed to send email. Please try again.'); 
-        } finally {
-            setLoading(false);
-            setEmail(''); 
+            setSuccess(null); 
         }
-    };
     
+        setEmail(''); 
+    };
     
 
     return (
@@ -68,13 +66,11 @@ const Contact = () => {
                         className="px-4 py-3 mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full border-gray-300 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition duration-200 ease-in-out shadow-sm"
                     />
                     <button
-    disabled={loading}
-    className={`flex items-center justify-center absolute right-1 top-1 px-4 font-bold h-10 ${loading ? 'bg-gray-500' : 'bg-blue-500'} dark:bg-blue-600 text-white rounded-md shadow hover:bg-blue-600 dark:hover:bg-blue-700 transition duration-200 ease-in-out`}
-    type="submit"
->
-    {loading ? 'Sending...' : 'Send'}
-</button>
-
+                        className="flex items-center justify-center absolute right-1 top-1 px-4 font-bold h-10 bg-blue-500 dark:bg-blue-600 text-white rounded-md shadow hover:bg-blue-600 dark:hover:bg-blue-700 transition duration-200 ease-in-out"
+                        type="submit"
+                    >
+                        Send
+                    </button>
                 </form>
             </motion.div>
         </div>
