@@ -4,8 +4,9 @@ import axios from 'axios';
 
 const Contact = () => {
     const [email, setEmail] = useState('');
-    const [error, setError] = useState(null); 
-    const [success, setSuccess] = useState(null); 
+    const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(null);
+    const [loading, setLoading] = useState(false); // Add loading state
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -13,24 +14,29 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+        setLoading(true); // Set loading to true when submitting
+
         try {
             const response = await axios.post('https://professional-portfolio-ten-fawn.vercel.app/send-email', { email });
-    
+
             if (response.status === 200) {
                 console.log("Email submitted:", email);
-                setSuccess('Email sent successfully!'); 
-                setError(null); 
+                setSuccess('Email sent successfully!');
+                setError(null);
+                setEmail(''); // Clear the input on success
             }
         } catch (err) {
-            console.error('Error sending email:', err);
-            setError('Failed to send email. Please try again.'); 
-            setSuccess(null); 
+            console.error('Error sending email:', err.response || err.message); // Log the error response for better debugging
+            setError('Failed to send email. Please try again.');
+            setSuccess(null);
+        } finally {
+            setLoading(false); // Set loading to false after completion
+            setTimeout(() => {
+                setSuccess(null); // Clear success message after 5 seconds
+                setError(null); // Clear error message after 5 seconds
+            }, 5000);
         }
-    
-        setEmail(''); 
     };
-    
 
     return (
         <div className='max-w-4xl mx-auto p-8'>
@@ -66,10 +72,11 @@ const Contact = () => {
                         className="px-4 py-3 mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full border-gray-300 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition duration-200 ease-in-out shadow-sm"
                     />
                     <button
-                        className="flex items-center justify-center absolute right-1 top-1 px-4 font-bold h-10 bg-blue-500 dark:bg-blue-600 text-white rounded-md shadow hover:bg-blue-600 dark:hover:bg-blue-700 transition duration-200 ease-in-out"
+                        className={`flex items-center justify-center absolute right-1 top-1 px-4 font-bold h-10 ${loading ? 'bg-gray-400' : 'bg-blue-500'} dark:bg-blue-600 text-white rounded-md shadow hover:bg-blue-600 dark:hover:bg-blue-700 transition duration-200 ease-in-out`}
                         type="submit"
+                        disabled={loading} // Disable the button when loading
                     >
-                        Send
+                        {loading ? 'Sending...' : 'Send'}
                     </button>
                 </form>
             </motion.div>
