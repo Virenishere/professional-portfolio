@@ -8,8 +8,9 @@ const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
+// CORS configuration
 const corsOptions = {
-    origin: "https://professional-portfolio-frontend-nine.vercel.app",
+    origin: '*', // Change back to your specific frontend URL after testing
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
