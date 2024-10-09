@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 500; // Use PORT from environment
 const app = express();
 
 const corsOptions = {
-    origin: "https://professional-portfolio-nine-sigma.vercel.app/",
+    origin: "*",
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true, // Allow credentials if needed
