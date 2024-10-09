@@ -14,7 +14,8 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+        setLoading(true); // Set loading to true
+    
         try {
             const response = await axios.post('https://professional-portfolio-ten-fawn.vercel.app/send-email', { email });
             if (response.status === 200) {
@@ -23,13 +24,15 @@ const Contact = () => {
                 setError(null);
             }
         } catch (err) {
-            console.error('Error sending email:', err.response ? err.response.data : err.message); // Log the error response
+            console.error('Error sending email:', err.response ? err.response.data : err.message);
             setError('Failed to send email. Please try again.');
             setSuccess(null);
+        } finally {
+            setLoading(false); // Reset loading state
+            setEmail(''); // Clear the email input
         }
-        
-        setEmail('');
     };
+    
     
 
     return (

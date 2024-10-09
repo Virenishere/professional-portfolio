@@ -10,24 +10,25 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-    origin: '*', // Change back to your specific frontend URL after testing
+    origin: ["https://professional-portfolio-frontend-nine.vercel.app", "https://professional-portfolio-frontend-gwuo16sgc.vercel.app"], // Add other origins if needed
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
 };
 
+
 // Middleware
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); // Make sure this line comes first
 app.use(bodyParser.json());
 app.use(helmet());
 
-// Enable preflight for the send-email route
-app.options('/send-email', cors(corsOptions));
-
-// Root route for testing
+// Test route to verify server is working
 app.get('/', (req, res) => {
     res.send('Welcome to the Email Service API!');
 });
+
+// Enable preflight for the send-email route
+app.options('/send-email', cors(corsOptions)); // This should handle preflight requests
 
 // Email sending route
 app.post('/send-email', async (req, res) => {
