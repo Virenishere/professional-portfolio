@@ -10,15 +10,17 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-    origin: ["https://professional-portfolio-frontend-nine.vercel.app", "https://professional-portfolio-frontend-gwuo16sgc.vercel.app"], // Add other origins if needed
+    origin: [
+        "https://professional-portfolio-frontend-nine.vercel.app",
+        "https://professional-portfolio-frontend-gwuo16sgc.vercel.app"
+    ],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
 };
 
-
 // Middleware
-app.use(cors(corsOptions)); // Make sure this line comes first
+app.use(cors(corsOptions)); // CORS should be the first middleware
 app.use(bodyParser.json());
 app.use(helmet());
 
@@ -26,9 +28,6 @@ app.use(helmet());
 app.get('/', (req, res) => {
     res.send('Welcome to the Email Service API!');
 });
-
-// Enable preflight for the send-email route
-app.options('/send-email', cors(corsOptions)); // This should handle preflight requests
 
 // Email sending route
 app.post('/send-email', async (req, res) => {
@@ -47,10 +46,10 @@ app.post('/send-email', async (req, res) => {
     });
 
     const mailOptions = {
-        from: email,
-        to: process.env.EMAIL_USER,
-        subject: `Contact Form Submission`,
-        text: `You have received a new message from your contact form: ${email}`,
+        from: email, // sender address
+        to: process.env.EMAIL_USER, // list of receivers
+        subject: `Contact Form Submission`, // Subject line
+        text: `You have received a new message from your contact form: ${email}`, // plain text body
     };
 
     try {
@@ -61,6 +60,9 @@ app.post('/send-email', async (req, res) => {
         return res.status(500).json({ message: 'Error sending email' });
     }
 });
+
+// Enable preflight for the send-email route
+app.options('/send-email', cors(corsOptions)); // Handle preflight requests
 
 // Start the server
 app.listen(PORT, () => {
