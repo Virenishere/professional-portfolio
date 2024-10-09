@@ -9,17 +9,14 @@ const PORT = process.env.PORT || 500; // Use PORT from environment
 const app = express();
 
 const corsOptions = {
-    origin: "https://professional-portfolio-frontend-henna.vercel.app/",
+    origin: "https://professional-portfolio-frontend-nine.vercel.app/",
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
-    credentials: true,
 };
 
 
 // Middleware
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));  // Handle preflight requests
-
 app.use(bodyParser.json());
 app.use(helmet());
 
