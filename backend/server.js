@@ -5,14 +5,14 @@ const bodyParser = require("body-parser");
 const helmet = require('helmet');
 const cors = require('cors');
 
-const PORT = process.env.PORT || 5000; // Use PORT from environment
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 const corsOptions = {
     origin: "https://professional-portfolio-frontend-nine.vercel.app",
-    methods: ['GET', 'POST', 'OPTIONS'], // Allowing specific methods
+    methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
-    credentials: true, // Optional: if you need to include cookies in requests
+    credentials: true,
 };
 
 // Middleware
@@ -23,6 +23,12 @@ app.use(helmet());
 // Enable preflight for the send-email route
 app.options('/send-email', cors(corsOptions));
 
+// Root route for testing
+app.get('/', (req, res) => {
+    res.send('Welcome to the Email Service API!');
+});
+
+// Email sending route
 app.post('/send-email', async (req, res) => {
     const { email } = req.body;
 
@@ -54,6 +60,7 @@ app.post('/send-email', async (req, res) => {
     }
 });
 
+// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running at port ${PORT}`);
 });
