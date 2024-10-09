@@ -4,15 +4,32 @@ import axios from 'axios';
 
 const Contact = () => {
     const [email, setEmail] = useState('');
+    const [error, setError] = useState(null); 
+    const [success, setSuccess] = useState(null); 
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         
-        console.log("Email submitted:", email);
+        try {
+            // Sending email to your backend endpoint
+            const response = await axios.post('https://professional-portfolio-viren-backend-7z71fg1z6.vercel.app/', { email });
+
+            // If the response is successful
+            if (response.status === 200) {
+                console.log("Email submitted:", email);
+                setSuccess('Email sent successfully!'); 
+                setError(null); 
+            }
+        } catch (err) {
+            console.error('Error sending email:', err);
+            setError('Failed to send email. Please try again.'); 
+            setSuccess(null); 
+        }
+
         setEmail(''); 
     };
 
@@ -33,6 +50,10 @@ const Contact = () => {
                 <p className="my-2 text-gray-800 dark:text-gray-200">
                     Drop in your email ID and I will get back to you.
                 </p>
+                
+                {/* Display success or error messages */}
+                {success && <p className="text-green-600">{success}</p>}
+                {error && <p className="text-red-600">{error}</p>}
                 
                 <form className="relative my-4" onSubmit={handleSubmit}>
                     <input
