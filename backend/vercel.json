@@ -4,16 +4,16 @@
       {
         "src": "/send-email",
         "methods": ["POST"],
-        "dest": "/backend/server.js"  
+        "dest": "/server.js"  
       },
       {
         "src": "/",
         "methods": ["GET"],
-        "dest": "/backend/server.js"  
+        "dest": "/server.js"  
       },
       {
         "src": "/(.*)",
-        "dest": "/backend/server.js" 
+        "dest": "/server.js" 
       }
     ]
   }
