@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react"; 
+import React, { useEffect, useState } from "react";
+import { Routes, Route } from 'react-router-dom';
 import Home from "./components/Home/Home"; 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       return newMode; 
     });
   };
+
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode");
     if (savedMode === "true") {
@@ -21,8 +23,10 @@ const App = () => {
 
   return (
     <div className={`overflow-x-hidden ${darkMode ? "dark" : ""}`}>
-      <Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} /> 
-      
+      <Routes>
+        <Route path="/" element={<Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} />} />
+        {/* Add other routes here if needed */}
+      </Routes>
     </div>
   );
 };
