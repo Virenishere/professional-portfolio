@@ -11,12 +11,11 @@ const Header = () => {
           Virender Prasad
         </h1>
         <div className="flex flex-wrap items-center mb-5 text-zinc-700 dark:text-zinc-400">
-          
           <div className="flex space-x-4">
             <a href="https://x.com/Viren_iz_here" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
                 <FaTwitter className="text-2xl" />
             </a>
-            <a href="https://github.com/Virenishere" target="_blank" rel="noopener noreferrer" className=" hover:text-red-500 transition duration-200">
+            <a href="https://github.com/Virenishere" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition duration-200">
                 <FaGithub className="text-2xl" />
             </a>
             <a href="https://www.linkedin.com/in/virenderprasad/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition duration-200">
@@ -28,7 +27,7 @@ const Header = () => {
           </div>
         </div>
         <p className="text-zinc-600 dark:text-zinc-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eos quidem, enim consequatur neque est corrupti consectetur totam similique et.
+        I am a <strong>passionate web developer</strong> eager to take on new challenges in both <strong>frontend</strong> and <strong>backend development</strong>. With a background in technical support, I bring a unique perspective to <strong>problem-solving</strong> and <strong>customer satisfaction</strong>.
         </p>
         
         <a href="https://docs.google.com/document/d/1-o2po9i3nAuw7KxLV2OBPkPnEGXhFjHlh-wg3UyiFow/export?format=pdf" download className="flex items-center w-32 my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

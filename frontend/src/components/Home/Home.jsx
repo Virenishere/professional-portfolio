@@ -5,6 +5,7 @@ import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
+import About from "../About/About";
 
 
 const Home = ({ toggleDarkMode, darkMode }) => {
@@ -14,8 +15,10 @@ const Home = ({ toggleDarkMode, darkMode }) => {
             <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
             <Skills toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
             <Projects toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+            <About toggleDarkMode={toggleDarkMode} darkMode={darkMode} /> 
             <Contact toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-            <Footer toggleDarkMode={toggleDarkMode} darkMode={darkMode} />           
+            <Footer toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+                      
         </div>
     );
 };

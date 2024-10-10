@@ -8,31 +8,31 @@ import farmer2BuyerImage from '../../assets/f2b.png';
 const projectsData = [
     {
         title: "Pawan Computer Center",
-        description: "Never write from scratch again. Kickstart your next great writing piece with Moonbeam. Your long-form writing AI assistant.",
-        technologies: ["Front-end", "GPT-3", "Next.js", "React", "TailwindCSS", "Chrome Extension"],
+        description: "Implemented a secure authentication system and admin dashboard for managing 500+ student records, leveraging MongoDB and Stripe for efficient operations and payment processing.",
+        technologies: ["Front-end", "React", "TailwindCSS", "MongoDB", "NodeJs", "ExpressJS"],
         imageUrl: pawanComputerCenterImage, // Replace with your image URLs
         link: "https://pawan-computer-center-h5xa.vercel.app/" // Add a link property
     },
     {
         title: "Build Your Buzz",
-        description: "Building modern applications that scale well and are easy to maintain. Cutting edge websites with a pinch of magic, and a lot of love.",
-        technologies: ["Next.js", "React", "TailwindCSS", "Full-Stack"],
+        description: "Developed a digital marketing platform using the MERN stack and React Router DOM for smooth navigation, featuring secure user authentication and integrated Nodemailer for effective communication.",
+        technologies: ["Front-end", "React", "TailwindCSS", "NodeJs", "ExpressJS"],
         imageUrl: buildYourBuzzImage,
         link: "https://build-your-buzz.vercel.app/" // Add a link property
     },
     {
-        title: "CoinLore",
-        description: "Practice the most popular algorithmic questions and Front-end interview questions with an interactive IDE and learning environment.",
-        technologies: ["Next.js", "React", "TailwindCSS", "Monaco", "Algorithms"],
-        imageUrl: coinLoreImage,
-        link: "https://coin-lore.vercel.app/" // Add a link property
-    },
-    {
         title: "Farmer2Buyer",
-        description: "Beautiful, Handcrafted, ready-to-use components and templates for your next Tailwind web app project.",
-        technologies: ["Tailwind", "Next.js", "Freemium"],
+        description: "Developed a responsive interface for agricultural products, enhancing accessibility across devices while improving user experience through effective DOM navigation during presentations at SIH India.",
+        technologies: ["TailwindCSS", "ReactJS"],
         imageUrl: farmer2BuyerImage,
         link: "https://farmers-2-sellers.netlify.app/" // Add a link property
+    },
+    {
+        title: "CoinLore",
+        description: "Designed the concept for a cryptocurrency platform's homepage, focusing on data aggregation from multiple sources to enhance user experience.",
+        technologies: ["Html", "BootstrapCSS"],
+        imageUrl: coinLoreImage,
+        link: "https://coin-lore.vercel.app/" // Add a link property
     },
 ];
 
