@@ -81,6 +81,10 @@ npm run dev
 
 The frontend will run on `http://localhost:3000` and the backend on `http://localhost:5000` by default.
 
+
+## Deployment
+The project is deployed on Vercel. You can view it live at: https://professional-portfolio-frontend-nine.vercel.app/
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions or improvements, feel free to create an issue or submit a pull request.
