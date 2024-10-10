@@ -14,6 +14,7 @@ const App = () => {
     });
   };
 
+  
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode");
     if (savedMode === "true") {
