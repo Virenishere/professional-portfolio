@@ -2,19 +2,19 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { LuSun, LuMoon } from "react-icons/lu";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; 
-import { Link } from "react-scroll"; // Import from react-scroll
+import { Link } from "react-scroll"; 
 
 export default function Navbar({ toggleDarkMode, darkMode }) {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Updated links to match the IDs of sections in Home
+    
     const links = [
-        { name: "Home", link: "header" },       // Corresponds to Header component
-        { name: "Skills", link: "skills" },      // Corresponds to Skills component
-        { name: "Projects", link: "projects" },  // Corresponds to Projects component
-        { name: "About", link: "about" },        // Corresponds to About component
-        { name: "Contact", link: "contact" },    // Corresponds to Contact component
+        { name: "Home", link: "header" },       
+        { name: "Skills", link: "skills" },      
+        { name: "Projects", link: "projects" },  
+        { name: "About", link: "about" },       
+        { name: "Contact", link: "contact" },    
     ];
 
     return (

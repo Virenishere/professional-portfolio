@@ -25,7 +25,6 @@ const App = () => {
     <div className={`overflow-x-hidden ${darkMode ? "dark" : ""}`}>
       <Routes>
         <Route path="/" element={<Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} />} />
-        {/* Add other routes here if needed */}
       </Routes>
     </div>
   );
