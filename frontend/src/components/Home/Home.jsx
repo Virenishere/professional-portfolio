@@ -1,5 +1,5 @@
 import React from "react";
-import { Element } from "react-scroll"; // Import Element from react-scroll
+import { Element, Link } from 'react-scroll';
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import Projects from "../Projects/Projects";
