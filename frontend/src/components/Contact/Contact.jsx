@@ -17,7 +17,7 @@ const Contact = () => {
         setLoading(true); // Set loading to true
     
         try {
-            const response = await axios.post('https://professional-portfolio-cz00ksfio-virender-prasads-projects.vercel.app/send-email','https://professional-portfolio-ivory.vercel.app/', { email });
+            const response = await axios.post('https://professional-portfolio-ivory.vercel.app/send-email', { email });
             if (response.status === 200) {
                 console.log("Email submitted:", email);
                 setSuccess('Email sent successfully!');

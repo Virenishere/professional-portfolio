@@ -8,7 +8,6 @@ const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
-// CORS configuration
 const corsOptions = {
     origin: [
         "https://professional-portfolio-frontend-nine.vercel.app",
@@ -18,6 +17,7 @@ const corsOptions = {
     allowedHeaders: ['Content-Type'],
     credentials: true,
 };
+
 
 // Middleware
 app.use(cors(corsOptions)); // CORS should be the first middleware
