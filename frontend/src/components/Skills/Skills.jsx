@@ -12,10 +12,8 @@ const Skills = () => {
     { Icon: FaReact, label: 'React.js', color: 'text-cyan-600', bgColor: 'bg-cyan-200', darkBgColor: 'bg-cyan-800' },
     { Icon: FaGithub, label: 'GitHub', color: 'text-black', bgColor: 'bg-gray-200', darkBgColor: 'bg-gray-700' },
     { Icon: FaGitAlt, label: 'Git', color: 'text-orange-600', bgColor: 'bg-orange-200', darkBgColor: 'bg-orange-800' },
-    { Icon: SiPostgresql, label: 'PostgreSQL', color: 'text-blue-600', bgColor: 'bg-blue-200', darkBgColor: 'bg-blue-800' },
     { Icon: SiMongodb, label: 'MongoDB', color: 'text-green-600', bgColor: 'bg-green-200', darkBgColor: 'bg-green-800' },
-    { Icon: SiFlutter, label: 'Flutter', color: 'text-blue-600', bgColor: 'bg-blue-200', darkBgColor: 'bg-blue-800' },
-    { Icon: FaFigma, label: 'Figma', color: 'text-pink-600', bgColor: 'bg-pink-200', darkBgColor: 'bg-pink-800' }
+    { Icon: SiPostgresql, label: 'PostgreSQL', color: 'text-blue-600', bgColor: 'bg-blue-200', darkBgColor: 'bg-blue-800' },
   ];
 
   return (
