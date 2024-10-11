@@ -27,13 +27,7 @@ const projectsData = [
         imageUrl: farmer2BuyerImage,
         link: "https://farmers-2-sellers.netlify.app/" // Add a link property
     },
-    {
-        title: "CoinLore",
-        description: "Designed the concept for a cryptocurrency platform's homepage, focusing on data aggregation from multiple sources to enhance user experience.",
-        technologies: ["Html", "BootstrapCSS"],
-        imageUrl: coinLoreImage,
-        link: "https://coin-lore.vercel.app/" // Add a link property
-    },
+
 ];
 
 const Projects = () => {
