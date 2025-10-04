@@ -30,7 +30,7 @@ const Header = () => {
         I am a <strong>passionate web developer</strong> eager to take on new challenges in both <strong>frontend</strong> and <strong>backend development</strong>. With a background in technical support, I bring a unique perspective to <strong>problem-solving</strong> and <strong>customer satisfaction</strong>.
         </p>
         
-        <a href="https://docs.google.com/document/d/1-o2po9i3nAuw7KxLV2OBPkPnEGXhFjHlh-wg3UyiFow/export?format=pdf" download className="flex items-center w-32 my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <a href="https://drive.google.com/uc?export=download&id=13TElvxPrAnjGASA3ZR39fTe10OglKNTH" download className="flex items-center w-32 my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           <IoMdCloudDownload className="mr-2"/> Resume
         </a>
       </div>
