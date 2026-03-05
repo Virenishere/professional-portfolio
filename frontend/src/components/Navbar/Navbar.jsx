@@ -10,11 +10,11 @@ export default function Navbar({ toggleDarkMode, darkMode }) {
 
     
     const links = [
-        { name: "Home", link: "header" },       
-        { name: "Skills", link: "skills" },      
-        { name: "Projects", link: "projects" },  
-        { name: "About", link: "about" },       
-        { name: "Contact", link: "contact" },    
+        { name: "Home", link: "header" },
+        { name: "Skills", link: "skills" },
+        { name: "About", link: "about" },
+        { name: "Projects", link: "projects" },
+        { name: "Contact", link: "contact" },
     ];
 
     return (

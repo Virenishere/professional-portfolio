@@ -1,13 +1,52 @@
 export const experienceData = [
   {
     id: 1,
+    title: "Full-Stack Engineer",
+    company: "Peeker AI",
+    location: "New York, United States (Remote)",
+    startDate: "Nov 2025",
+    endDate: "Present",
+    type: "Full-time",
+    description:
+      "Building and scaling a full-stack SaaS analytics and integrations platform, spanning admin dashboards, webhook pipelines, AI analytics, and cloud-native deployments.",
+    responsibilities: [
+      "Built and shipped a full-stack Admin Dashboard using React (TypeScript), Node.js, and Express to manage SaaS integrations, subscriptions, webhooks, and real-time analytics powered by Convex",
+      "Designed scalable webhook and event-processing pipelines for Stripe, EmailBison, PostHog, Cal.com, Make.com, Tolt, Aimfox and other providers using BullMQ with Redis for asynchronous jobs, analytics rollups, and reliable background processing",
+      "Integrated a ChatGPT-powered AI analytics assistant that securely queries database insights and generates business intelligence summaries, revenue analysis, and performance recommendations for decision-making",
+      "Containerized backend services with Docker, deployed them on a Hetzner VM, and implemented CI/CD pipelines using GitHub Actions for automated type-checking, builds, and production-ready releases"
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Convex",
+      "BullMQ",
+      "Redis",
+      "Stripe",
+      "PostHog",
+      "Cal.com",
+      "Make.com",
+      "Docker",
+      "GitHub Actions",
+      "Hetzner"
+    ],
+    achievements: [
+      "Delivered a production-ready admin platform covering integrations, subscriptions, analytics, and webhooks",
+      "Improved reliability and scalability of event-processing pipelines through BullMQ- and Redis-backed background jobs",
+      "Enabled non-technical stakeholders to self-serve analytics via an AI assistant with secure data access controls"
+    ]
+  },
+  {
+    id: 2,
     title: "Full Stack Developer Intern",
     company: "LOOP IT METHODS PVT LTD",
     location: "Noida, India (Onsite)",
     startDate: "Aug 2025",
-    endDate: "Present",
+    endDate: "Nov 2025",
     type: "Internship",
-    description: "Currently developing a Website Builder platform (similar to Wix/WordPress) that enables users to create and redesign sites from scratch.",
+    description:
+      "Currently developing a Website Builder platform (similar to Wix/WordPress) that enables users to create and redesign sites from scratch.",
     responsibilities: [
       "Built a Rich Text Editor from scratch for advanced text formatting and content editing",
       "Implemented logic for infinite nested divs with draggable/resizable functionality using RnD",
@@ -23,14 +62,15 @@ export const experienceData = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Full Stack Developer Intern",
     company: "Image Pipeline",
     location: "Delaware, United States (Remote)",
     startDate: "Jan 2025",
     endDate: "Apr 2025",
     type: "Internship",
-    description: "Built an interactive Text-to-Image UI integrated with LLM APIs (SDXL and others), enhanced with Framer Motion animations and minimalist UX inspired by modern design trends.",
+    description:
+      "Built an interactive Text-to-Image UI integrated with LLM APIs (SDXL and others), enhanced with Framer Motion animations and minimalist UX inspired by modern design trends.",
     responsibilities: [
       "Developed a full-featured image/audio/video generation canvas app using Next.js + TypeScript",
       "Engineered smooth API + State Management flow with Zustand and polling",
@@ -47,14 +87,15 @@ export const experienceData = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Technical Support Engineer (Adobe)",
     company: "Teleperformance",
     location: "Gurugram, India",
     startDate: "Dec 2022",
     endDate: "Jul 2024",
     type: "Full-time",
-    description: "Resolved software bugs with Adobe devs via JIRA; provided real-time support for workflows, AE scripting, and account configs using Active Directory.",
+    description:
+      "Resolved software bugs with Adobe devs via JIRA; provided real-time support for workflows, AE scripting, and account configs using Active Directory.",
     responsibilities: [
       "Resolved technical issues for Adobe Creative Suite products",
       "Provided real-time support for workflows, AE scripting, and account configurations",
@@ -70,14 +111,15 @@ export const experienceData = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Industrial Trainee",
     company: "Siemens",
     location: "Visakhapatnam(A.P.), India",
     startDate: "Jan 2020",
     endDate: "Feb 2020",
     type: "Internship",
-    description: "Built PLC programs (Siemens TIA), simulated SCADA systems, and gained hands-on automation and robotics experience.",
+    description:
+      "Built PLC programs (Siemens TIA), simulated SCADA systems, and gained hands-on automation and robotics experience.",
     responsibilities: [
       "Developed PLC programs using Siemens TIA Portal",
       "Simulated SCADA systems for industrial automation",
